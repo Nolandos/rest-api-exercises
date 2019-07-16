@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv/config');
 
 //Import Routes
-const transportsRoute  = require('./routes/transports');
+const ordersRoute  = require('./routes/orders');
 
 //Create app 
 const app = experss();
@@ -13,7 +13,7 @@ const app = experss();
 //Middlewares
 app.use(cors())
 app.use(bodyParser.json());
-app.use('/transports', transportsRoute);
+app.use('/orders', ordersRoute);
 
 //ROUTES
 app.get('/', (req, res) => {

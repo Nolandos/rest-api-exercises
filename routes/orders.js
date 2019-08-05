@@ -31,6 +31,7 @@ router.post('/', async (req, res) => {
     const orderItem = new order({
         source_address: req.body.source_address,
         destination_address: req.body.destination_address,
+        date: req.body.date,
         price: req.body.price,
         driver: req.body.driver,
         customer: req.body.customer,

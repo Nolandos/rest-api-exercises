@@ -6,6 +6,9 @@ require('dotenv/config');
 
 //Import Routes
 const ordersRoute  = require('./routes/orders');
+const vehiclesRoute  = require('./routes/vehicles');
+const driversRoute  = require('./routes/drivers');
+const clientsRoute  = require('./routes/clients');
 
 //Create app 
 const app = experss();
@@ -14,6 +17,9 @@ const app = experss();
 app.use(cors())
 app.use(bodyParser.json());
 app.use('/orders', ordersRoute);
+app.use('/vehicles', vehiclesRoute);
+app.use('/drivers', driversRoute);
+app.use('/clients', clientsRoute);
 
 //ROUTES
 app.get('/', (req, res) => {
